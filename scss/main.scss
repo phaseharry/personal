@@ -1,5 +1,9 @@
-@import 'config'; //imports the mixins and variables from our partials _config.scss files
-//all partial files start with an underscore (_)
+@import 'config'; 
+@import 'menu';
+/* 
+  imports the mixins and variables from our partials _config.scss files
+  all partial files start with an underscore (_)
+*/
 
 * {
   box-sizing: border-box;
