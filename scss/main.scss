@@ -1,5 +1,77 @@
-$primary-color: rgb(18, 91, 173);
+@import 'config'; //imports the mixins and variables from our partials _config.scss files
+//all partial files start with an underscore (_)
+
+* {
+  box-sizing: border-box;
+}
 
 body {
+  @include background;
   background: $primary-color;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+//headings
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading { //& targets the parent element with a class of lg-heading
+    font-size: 6rem;
+  }
+
+  &.sm-heading { //& tagets the parent element with a class of sm-heading
+    margin-bottom: 2rem;
+    padding: 0.2rem 0.1rem;
+    background: rbga(lighten($primary-color, 2), 0.5); //rgba gives the lighten a opacity of 50% so we can see through it 
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4rem;
+  height: 100%;
+
+  &#home { //targets the any element with an id of home inside the main element (including the main element itself)
+    overflow: hidden; //removes the scrollbar if the contents of the main element overflows its alloted space
+    
+    h1 { //targets h1 inside the element with id of home 
+      margin-top: 20vh; 
+      /* 
+        vh is a unit that stands for viewport height. Think of the height as 100 slices across, 
+        so if you say 20vh, it will take 20 of those slices. If you said 100vh it will take up all of the slices.
+        50vh will take up half the 100 slices.
+      */
+    }
+  }
+
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+      &:hover { //targets the parent element (the a element in this case) and will apply this stylesheet for the :hover pseudo element
+        color: $secondary-color;
+        @include eastOut;
+      }
+    }
+  }
 }

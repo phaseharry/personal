@@ -1,0 +1,35 @@
+$primary-color: #444;
+$secondary-color: #eece1a;
+$show-home-image: true;
+$home-image: url(../img/mbp.jpg); //need image
+$background-opactiy: 0.5;
+
+@mixin eastOut {
+  transition: all 0.5s ease-out; //transition in CSS is just the time it takes to do something (in this case, we're defining the item it takes for the color to be our secondary color when our mouse hovers over the icons
+}
+
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after { 
+        /* 
+          the :after creates a pseudo element that is the last child of the selected element.
+          so we create a div right after the element with an id of bg-img and append it as a child.
+          :after pseudo elements must have a content property and :after is inline by default
+        */
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($primary-color, $background-opactiy);
+        z-index: -1;
+      }
+    }
+  }
+}
