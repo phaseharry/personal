@@ -36,3 +36,96 @@
   }
 }
 
+// Menu Overlay
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-branding, &-nav { //will target the menu-branding and menu-nav classes because & will be the parent (menu)
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-nav{
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, 5);
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    @include eastOut;
+
+    &.show {
+      // slide in from the top when the nav element get assigned a class of .show
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // Portrait side
+  &-branding {
+    background: $primary-color;
+    transform: translate3d(0, 100%, 0);
+    @include eastOut;
+
+    &.show {
+      // slide in from the bottom when the menu-branding element gets a class of .show
+      transform: translate3d(0, 0, 0);
+    }
+
+    .portrait {
+      width: 250px;
+      height: 250px;
+      background: url('../img/headshot.png'); //need to find an image that fits properly
+      border-radius: 50%;
+      border: solid 3px $secondary-color;
+    }
+  }
+
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include eastOut;
+    
+    &.show {
+      // slide in from the right
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+    @include eastOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Delay for each nav item slide by 0.1 seconds
+@for $x from 1 through 5 { //looping through our nav-items to add the delay
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}
