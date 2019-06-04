@@ -33,3 +33,28 @@ $background-opactiy: 0.5;
     }
   }
 }
+
+// Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) { // any CSS applied within this media query will only apply if its width is 500px or less
+    @content; //@contents allows it to be bring in the SCSS we write in another file when we call the mixins name
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) { // any CSS applied within this media query will only apply if its width is 768px or less
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) { // any CSS applied within this media query will only apply if its width is between 769px and 1170px
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) { // any CSS applied within this media query will only apply if its width is over 1170px
+    @content;
+  }
+}
