@@ -227,7 +227,11 @@ main {
     .menu-branding .portrait {
       background: url(../img/headshotsm.png);
       width: 150px;
-      height: 150px; } }
+      height: 150px; }
+  .about-info {
+    display: grid;
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
