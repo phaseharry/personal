@@ -9,7 +9,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: #000;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -40,14 +40,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #d9d9d9;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #e6e6e6;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -57,25 +57,25 @@
       height: 250px;
       background: url("../img/headshot.png");
       border-radius: 50%;
-      border: solid 3px #eece1a; }
+      border: solid 3px #33bbff; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #33bbff; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
     font-size: 30px;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #33bbff; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -102,8 +102,8 @@
   box-sizing: border-box; }
 
 body {
-  background: #444;
-  color: #fff;
+  background: #e6e6e6;
+  color: #000;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -124,7 +124,7 @@ body {
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(68, 68, 68, 0.5);
+      background: rgba(230, 230, 230, 0.5);
       z-index: -1; }
 
 h1, h2, h3 {
@@ -135,7 +135,7 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 0.1rem;
-    background: rbga(#494949, 0.5); }
+    background: rbga(#ebebeb, 0.5); }
 
 a {
   color: #fff;
@@ -147,7 +147,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #33bbff; }
 
 main {
   padding: 4rem;
@@ -168,9 +168,10 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.4rem; }
+      padding: 0.4rem;
+      color: #000; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #33bbff;
         transition: all 0.5s ease-out; }
 
 .about-info {
@@ -182,7 +183,7 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #eece1a 3px solid; }
+    border: #33bbff 3px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -193,9 +194,9 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    background: #515151;
+    background: #f3f3f3;
     padding: 0.5rem;
-    border-bottom: #eece1a 5px solid; }
+    border-bottom: #33bbff 5px solid; }
 
 .projects {
   display: grid;
@@ -206,8 +207,27 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #eece1a;
+      border-color: #33bbff;
       transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #33bbff;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -215,22 +235,22 @@ main {
   border: 0;
   margin-block: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #eece1a;
+    background: #33bbff;
     color: #000; }
 
 .btn-dark {
-  background: black;
+  background: #676767;
   color: #fff; }
 
 .btn-light {
-  background: #c4c4c4;
+  background: white;
   color: #333; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #2b2b2b;
-  color: #fff;
+  background: #cdcdcd;
+  color: #000;
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
@@ -273,10 +293,27 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+  .lg-heading {
+    margin-top: 1rem;
+    font-size: 5rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.25rem 1rem;
+      background: #33bbff;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; } }
 
 /* 
   we keep our media queries at the bottom because we want it to run after our main css has already been applied
