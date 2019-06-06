@@ -1,12 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Projects</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/dbfb32a536.js"></script>
+    <link rel='stylesheet' href='./css/main.css' type='text/css'> 
+    <title>Projects</title>
+  </head>
+  <body>
+    <header>
+      <!-- represents the hamburger stack menu -->
+      <div class='menu-btn'> 
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <!-- nav that covers up our webpage with navigation links as well as headshot -->
+      <nav class="menu">
+        <div class="menu-branding">
+          <!-- div with class of portrait will be our headshot but instead of img element, we're going to instead a div and have our headshot as the background-image -->
+          <div class="portrait">
+          </div>
+        </div>
+
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">
+              About Me
+            </a>
+          </li>
+          <li class="nav-item current">
+            <a href="projects.html" class="nav-link">
+              Projects
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">
+              Contact
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="Resume.pdf" target='_blank' class="nav-link">
+              Resume
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id='about'>
+      <h1 class="lg-heading">
+        My <span class="text-secondary">Projects</span>
+      </h1>
+      <h2 class="sm-heading">
+        dont know yet
+      <h2>
+      <div class="projects">
+         <!-- Enter list of projects and have their images stored in the img folder -->
+        <div class="item">
+          <a href="">
+            <img src='img/projects/ironman2.png' alt='p1'>
+          </a>
+          <a href='' class='btn-light'>
+            <i class="fas fa-eye"></i> Project
+          </a>
+          <a href='' class='btn-dark'>
+            <i class="fab fa-github"></i> Github
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <img src='img/projects/ironman.png' alt='p1'>
+          </a>
+          <a href='' class='btn-light'>
+            <i class="fas fa-eye"></i> Project
+          </a>
+          <a href='' class='btn-dark'>
+            <i class="fab fa-github"></i> Github
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <img src='img/projects/spider-man.jpg' alt='p1'>
+          </a>
+          <a href='' class='btn-light'>
+            <i class="fas fa-eye"></i> Project
+          </a>
+          <a href='' class='btn-dark'>
+            <i class="fab fa-github"></i> Github
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <img src='img/projects/ironman2.png' alt='p1'>
+          </a>
+          <a href='' class='btn-light'>
+            <i class="fas fa-eye"></i> Project
+          </a>
+          <a href='' class='btn-dark'>
+            <i class="fab fa-github"></i> Github
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <img src='img/projects/ironman2.png' alt='p1'>
+          </a>
+          <a href='' class='btn-light'>
+            <i class="fas fa-eye"></i> Project
+          </a>
+          <a href='' class='btn-dark'>
+            <i class="fab fa-github"></i> Github
+          </a>
+        </div>
+      </div>
+    </main>
+    <footer id='main-footer'>
+      Copyright &copy; 2019
+    </footer>
+    <!-- loads in the script after all dom nodes have been loaded in -->
+    <script src='js/main.js'></script>
+  </body>
 </html>
