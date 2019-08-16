@@ -1,5 +1,5 @@
-$primary-color:#e6e6e6; // default #444
-$secondary-color: #33bbff; // default #eece1a
+$primary-color:#dad2d2; // default #444
+$secondary-color: #0f4b69; // default #eece1a
 $show-home-image: true;
 $home-image: url(../img/mbp.jpg); //need image
 $background-opactiy: 0.5;
@@ -11,7 +11,7 @@ $background-opactiy: 0.5;
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-      background: $home-image;
+      // background: $home-image;
       background-attachment: fixed;
       background-size: cover;
 
