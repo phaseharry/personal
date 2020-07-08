@@ -98,7 +98,7 @@ main {
   .bio-image {
     grid-area: bioimage;
     margin: auto;
-    border-radius: 50%;
+    // border-radius: 50%;
     border: $secondary-color 3px solid;
   }
   
@@ -120,7 +120,7 @@ main {
   } 
   
   .job {
-    background: lighten($primary-color, 5);
+    background: lighten(#b3cde0, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
   }
@@ -194,7 +194,6 @@ main {
   background: lighten($primary-color, 50);
   color: #333;
 }
-
 
 #main-footer {
   text-align: center;
