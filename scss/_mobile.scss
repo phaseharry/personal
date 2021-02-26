@@ -5,7 +5,7 @@
   }
 }
 
-// Desktops & Laptops 
+// Desktops & Laptops
 @include mediaLg {
   .projects {
     grid-template-columns: repeat(3, 1fr);
@@ -13,7 +13,7 @@
 }
 
 // Tables & Small Laptops
-@include mediaMd { 
+@include mediaMd {
   main {
     align-items: center;
     text-align: center;
@@ -24,7 +24,8 @@
     }
   }
 
-  ul.menu-nav, div.menu-branding {
+  ul.menu-nav,
+  div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0;
@@ -53,11 +54,11 @@
   .about-info {
     display: grid;
     grid-template-areas:
-    'bioimage'
-    'bio'
-    'job1'
-    'job2'
-    'job3';
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
     grid-template-columns: 1fr;
   }
 
