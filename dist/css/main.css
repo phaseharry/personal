@@ -9,7 +9,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #000;
+    background: #fff;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -40,14 +40,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #e8b6c2;
+    background: #1d2026;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #eec9d2;
+    background: #282c34;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -57,25 +57,25 @@
       height: 250px;
       background: url("../img/headshot.png");
       border-radius: 50%;
-      border: solid 3px #6497b1; }
+      border: solid 3px #d88b9d; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #6497b1; }
+      color: #d88b9d; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
     font-size: 30px;
     padding: 1rem 0;
     font-weight: 300;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #6497b1; }
+      color: #d88b9d; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -99,14 +99,17 @@
   -our mobile partials that contain our media queries are at the bottom of the file. More info there.
 */
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 body {
-  background: #eec9d2;
-  color: #000;
+  background: #282c34;
+  color: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background-attachment: fixed;
@@ -117,24 +120,30 @@ body {
           so we create a div right after the element with an id of bg-img and append it as a child.
           :after pseudo elements must have a content property and :after is inline by default
         */
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(238, 201, 210, 0.5);
+      background: rgba(40, 44, 52, 0.5);
       z-index: -1; }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   font-weight: 400; }
-  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
     font-size: 6rem; }
-  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 0.1rem;
-    background: rbga(#f0d1d8, 0.5); }
+    background: rbga(#2c313a, 0.5); }
 
 a {
   color: #fff;
@@ -146,11 +155,11 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #6497b1; }
+  color: #d88b9d; }
 
 main {
   padding: 4rem;
-  min-height: calc(100vh - 60px);
+  min-height: calc( 100vh - 60px);
   /*
     if no elements were between the heading and the footer then the footer would move up in place since 100% of the main
     element would be nothing. using calc(100vh) we can get the difference of the footer and style the footer to always be at the bottom
@@ -168,20 +177,21 @@ main {
     margin-top: 1rem; }
     main .icons a {
       padding: 0.4rem;
-      color: #000; }
+      color: #fff; }
       main .icons a:hover {
-        color: #6497b1;
+        color: #d88b9d;
         transition: all 0.5s ease-out; }
 
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
-    border: #6497b1 3px solid; }
+    border-radius: 1rem;
+    border: #d88b9d 3px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -194,7 +204,7 @@ main {
   .about-info .job {
     background: #c5d9e7;
     padding: 0.5rem;
-    border-bottom: #6497b1 5px solid; }
+    border-bottom: #d88b9d 5px solid; }
 
 .projects {
   display: grid;
@@ -205,7 +215,7 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #6497b1;
+      border-color: #d88b9d;
       transition: all 0.5s ease-out; }
 
 .boxes {
@@ -222,7 +232,7 @@ main {
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
-      background: #6497b1;
+      background: #d88b9d;
       color: #000; }
       .boxes div:hover span {
         color: #000; }
@@ -233,22 +243,22 @@ main {
   border: 0;
   margin-block: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #6497b1;
+    background: #d88b9d;
     color: #000; }
 
 .btn-dark {
-  background: #8c2c43;
+  background: black;
   color: #fff; }
 
 .btn-light {
-  background: white;
+  background: #a3aab8;
   color: #333; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #e2a2b2;
-  color: #000;
+  background: #121417;
+  color: #fff;
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
@@ -285,7 +295,7 @@ main {
       height: 150px; }
   .about-info {
     display: grid;
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
@@ -308,7 +318,7 @@ main {
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.25rem 1rem;
-      background: #6497b1;
+      background: #d88b9d;
       color: #000; }
       .boxes div:hover span {
         color: #000; } }

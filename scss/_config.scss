@@ -1,5 +1,5 @@
-$primary-color: #eec9d2; // white;// #dad2d2; // default #444
-$secondary-color: #6497b1; // default #eece1a
+$primary-color: #282c34; // #eec9d2; <-- pink
+$secondary-color: #d88b9d; // #6497b1; // default #eece1a
 $show-home-image: true;
 $home-image: url(../img/mbp.jpg); //need image
 $background-opactiy: 0.5;
@@ -15,13 +15,13 @@ $background-opactiy: 0.5;
       background-attachment: fixed;
       background-size: cover;
 
-      &:after { 
+      &:after {
         /* 
           the :after creates a pseudo element that is the last child of the selected element.
           so we create a div right after the element with an id of bg-img and append it as a child.
           :after pseudo elements must have a content property and :after is inline by default
         */
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         right: 0;
@@ -34,8 +34,8 @@ $background-opactiy: 0.5;
   }
 }
 // Set Text Color
-@function set-text-color($color){
-  @if(lightness($color) > 40){
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
     @return #000;
   } @else {
     @return #fff;
@@ -44,25 +44,29 @@ $background-opactiy: 0.5;
 
 // Media Query Mixins
 @mixin mediaSm {
-  @media screen and (max-width: 500px) { // any CSS applied within this media query will only apply if its width is 500px or less
+  @media screen and (max-width: 500px) {
+    // any CSS applied within this media query will only apply if its width is 500px or less
     @content; //@contents allows it to be bring in the SCSS we write in another file when we call the mixins name
   }
 }
 
 @mixin mediaMd {
-  @media screen and (max-width: 768px) { // any CSS applied within this media query will only apply if its width is 768px or less
+  @media screen and (max-width: 768px) {
+    // any CSS applied within this media query will only apply if its width is 768px or less
     @content;
   }
 }
 
 @mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1170px) { // any CSS applied within this media query will only apply if its width is between 769px and 1170px
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    // any CSS applied within this media query will only apply if its width is between 769px and 1170px
     @content;
   }
 }
 
 @mixin mediaXl {
-  @media screen and (min-width: 1171px) { // any CSS applied within this media query will only apply if its width is over 1170px
+  @media screen and (min-width: 1171px) {
+    // any CSS applied within this media query will only apply if its width is over 1170px
     @content;
   }
 }
